@@ -4,6 +4,7 @@ import 'package:ilearn/screens/onboarding.dart';
 import 'package:ilearn/screens/phone_verification1.dart';
 import 'package:ilearn/screens/phone_verification2.dart';
 import 'package:ilearn/screens/sign_up.dart';
+import 'package:ilearn/screens/success.dart';
 
 void main() {
   runApp(const MyApp());
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
         ),
         useMaterial3: true,
       ),
-      home: PhoneVerificationScreen(),
+      home: SuccessScreen(),
     );
   }
 }
