@@ -1,6 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:ilearn/components/buttons.dart';
+import 'package:ilearn/components/colors.dart';
 
 class CustomKeypadScreen extends StatefulWidget {
   const CustomKeypadScreen({super.key});
@@ -90,8 +91,8 @@ class _CustomKeypadScreenState extends State<CustomKeypadScreen> {
                         ),
                         Button1(
                           textColor: Colors.white,
-                          color: Color.fromARGB(255, 61, 92, 255),
-                          bgColor: Color.fromARGB(255, 61, 92, 255),
+                          color: primaryColor,
+                          bgColor: primaryColor,
                           text: "Continue",
                           onPressed: () {
                             if (kDebugMode) {

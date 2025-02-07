@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ilearn/components/buttons.dart';
+import 'package:ilearn/components/colors.dart';
 
 class OnboardingScreen extends StatelessWidget {
   const OnboardingScreen({super.key});
@@ -43,8 +44,8 @@ class OnboardingScreen extends StatelessWidget {
                   Expanded(
                     child: Button1(
                       textColor: Colors.white,
-                      color: Color.fromARGB(255, 61, 92, 255),
-                      bgColor: Color.fromARGB(255, 61, 92, 255),
+                      color: primaryColor,
+                      bgColor: primaryColor,
                       text: "Sign Up",
                       onPressed: () {},
                     ),
@@ -52,8 +53,8 @@ class OnboardingScreen extends StatelessWidget {
                   SizedBox(width: size.width * 0.03),
                   Expanded(
                     child: Button1(
-                      textColor: Color.fromARGB(255, 61, 92, 255),
-                      color: Color.fromARGB(255, 61, 92, 255),
+                      textColor: primaryColor,
+                      color: primaryColor,
                       bgColor: Colors.white,
                       text: "Log In",
                       onPressed: () {},

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ilearn/components/buttons.dart';
+import 'package:ilearn/components/colors.dart';
 import 'package:ilearn/components/textfield.dart';
 
 class SignUpScreen extends StatelessWidget {
@@ -70,8 +71,8 @@ class SignUpScreen extends StatelessWidget {
                             width: double.infinity,
                             child: Button1(
                               textColor: Colors.white,
-                              color: Color.fromARGB(255, 61, 92, 255),
-                              bgColor: Color.fromARGB(255, 61, 92, 255),
+                              color: primaryColor,
+                              bgColor: primaryColor,
                               text: "Create account",
                               onPressed: () {},
                             ),
@@ -104,7 +105,7 @@ class SignUpScreen extends StatelessWidget {
                           child: Text(
                             "Log in",
                             style: TextStyle(
-                              color: Color.fromARGB(255, 61, 92, 255),
+                              color: primaryColor,
                             ),
                           ),
                         ),

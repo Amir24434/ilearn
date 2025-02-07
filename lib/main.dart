@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ilearn/screens/home.dart';
 import 'package:ilearn/screens/login.dart';
 import 'package:ilearn/screens/onboarding.dart';
 import 'package:ilearn/screens/phone_verification1.dart';
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
         ),
         useMaterial3: true,
       ),
-      home: SuccessScreen(),
+      home: HomeScreen(),
     );
   }
 }

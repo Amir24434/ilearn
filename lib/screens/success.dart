@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ilearn/components/buttons.dart';
+import 'package:ilearn/components/colors.dart';
 
 class SuccessScreen extends StatelessWidget {
   const SuccessScreen({super.key});
@@ -26,7 +27,7 @@ class SuccessScreen extends StatelessWidget {
               children: [
                 Icon(
                   Icons.check_circle,
-                  color: Color.fromARGB(255, 61, 92, 255),
+                  color: primaryColor,
                   size: 80,
                 ),
                 SizedBox(height: 20),
@@ -50,9 +51,9 @@ class SuccessScreen extends StatelessWidget {
                 SizedBox(
                   width: double.infinity,
                   child: Button1(
-                    color: Color.fromARGB(255, 61, 92, 255),
+                    color: primaryColor,
                     text: "Done",
-                    bgColor: Color.fromARGB(255, 61, 92, 255),
+                    bgColor: primaryColor,
                     textColor: Colors.white,
                     onPressed: () {},
                   ),

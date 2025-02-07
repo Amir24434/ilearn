@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ilearn/components/buttons.dart';
+import 'package:ilearn/components/colors.dart';
 import 'package:ilearn/components/textfield.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -85,8 +86,8 @@ class LoginScreen extends StatelessWidget {
                             width: double.infinity,
                             child: Button1(
                               textColor: Colors.white,
-                              color: Color.fromARGB(255, 61, 92, 255),
-                              bgColor: Color.fromARGB(255, 61, 92, 255),
+                              color: primaryColor,
+                              bgColor: primaryColor,
                               text: "Log In",
                               onPressed: () {},
                             ),
@@ -109,7 +110,7 @@ class LoginScreen extends StatelessWidget {
                           child: Text(
                             "Sign up",
                             style: TextStyle(
-                              color: Color.fromARGB(255, 61, 92, 255),
+                              color: primaryColor,
                             ),
                           ),
                         ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ilearn/components/buttons.dart';
+import 'package:ilearn/components/colors.dart';
 
 class PhoneVerificationScreen extends StatefulWidget {
   const PhoneVerificationScreen({super.key});
@@ -117,9 +118,9 @@ class _PhoneVerificationScreenState extends State<PhoneVerificationScreen> {
               SizedBox(height: 80),
               Spacer(),
               Button1(
-                color: Color.fromARGB(255, 61, 92, 255),
+                color: primaryColor,
                 text: "Verify and Create Account",
-                bgColor: Color.fromARGB(255, 61, 92, 255),
+                bgColor: primaryColor,
                 textColor: Colors.white,
                 onPressed: _verifyCode,
               ),
