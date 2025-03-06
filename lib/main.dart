@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ilearn/components/b_n_bar.dart';
 import 'package:ilearn/screens/home.dart';
 import 'package:ilearn/screens/login.dart';
 import 'package:ilearn/screens/onboarding.dart';
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
         ),
         useMaterial3: true,
       ),
-      home: HomeScreen(),
+      home: MainScreen(),
     );
   }
 }
