@@ -41,12 +41,12 @@ class _MainScreenState extends State<MainScreen> {
             _selectedIndex = 2; // Navigate to Search Screen
           });
         },
-        backgroundColor: Colors.blue,
+        backgroundColor: Colors.grey[200],
         elevation: 5,
         shape: CircleBorder(),
         child: Icon(
           Icons.search,
-          color: Colors.white,
+          color: primaryColor,
         ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
@@ -61,26 +61,26 @@ class _MainScreenState extends State<MainScreen> {
               IconButton(
                 icon: Icon(Icons.home,
                     color:
-                        _selectedIndex == 0 ? primaryColor : Colors.grey[200]),
+                        _selectedIndex == 0 ? primaryColor : Colors.grey[400]),
                 onPressed: () => _onItemTapped(0),
               ),
               IconButton(
                 icon: Icon(Icons.book,
                     color:
-                        _selectedIndex == 1 ? primaryColor : Colors.grey[200]),
+                        _selectedIndex == 1 ? primaryColor : Colors.grey[400]),
                 onPressed: () => _onItemTapped(1),
               ),
               SizedBox(width: 40), // Space for the floating button
               IconButton(
                 icon: Icon(Icons.message,
                     color:
-                        _selectedIndex == 3 ? primaryColor : Colors.grey[200]),
+                        _selectedIndex == 3 ? primaryColor : Colors.grey[400]),
                 onPressed: () => _onItemTapped(3),
               ),
               IconButton(
                 icon: Icon(Icons.person,
                     color:
-                        _selectedIndex == 4 ? primaryColor : Colors.grey[200]),
+                        _selectedIndex == 4 ? primaryColor : Colors.grey[400]),
                 onPressed: () => _onItemTapped(4),
               ),
             ],

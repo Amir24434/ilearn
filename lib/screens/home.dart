@@ -2,8 +2,26 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:ilearn/components/colors.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
+
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  double _progress = 0.0;
+
+  void _startProgress() {
+    Future.delayed(Duration(milliseconds: 100), () {
+      if (_progress < 1.0) {
+        setState(() {
+          _progress += 0.1;
+        });
+        _startProgress();
+      }
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -252,11 +270,11 @@ class HomeScreen extends StatelessWidget {
               ],
             ),
             Positioned(
-              top: MediaQuery.of(context).size.height / 9,
+              top: MediaQuery.of(context).size.height / 11,
               left: 0,
               right: 0,
               child: Container(
-                height: 80,
+                height: 100,
                 width: 350,
                 margin: EdgeInsets.symmetric(horizontal: 20),
                 decoration: BoxDecoration(
@@ -270,6 +288,54 @@ class HomeScreen extends StatelessWidget {
                       offset: Offset(0, 4), // Shadow position (x, y)
                     ),
                   ],
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.only(
+                    top: 20,
+                    left: 20,
+                    right: 20,
+                    bottom: 10,
+                  ),
+                  child: Column(
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text("Learned today"),
+                          Text(
+                            "My courses",
+                            style: TextStyle(color: primaryColor),
+                          ),
+                        ],
+                      ),
+                      SizedBox(
+                        height: 5,
+                      ),
+                      Row(
+                        children: [
+                          Text(
+                            "46min",
+                            style: TextStyle(
+                              fontSize: 17,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          Text("/"),
+                          Text(
+                            "60min",
+                            style: TextStyle(
+                              fontSize: 10,
+                              color: Colors.grey[300],
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      LinearProgressIndicator(value: _progress),
+                    ],
+                  ),
                 ),
               ),
             ),
