@@ -100,7 +100,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         child: Column(
                           children: [
                             SizedBox(
-                              height: 50,
+                              height: 80,
                             ),
                             SingleChildScrollView(
                               scrollDirection: Axis.horizontal,
@@ -111,8 +111,46 @@ class _HomeScreenState extends State<HomeScreen> {
                                     width: size.width * 0.75,
                                     margin: EdgeInsets.all(10),
                                     decoration: BoxDecoration(
-                                      color: Colors.red,
+                                      color: Colors.blue[300],
                                       borderRadius: BorderRadius.circular(15),
+                                    ),
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(20.0),
+                                      child: Column(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceBetween,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Flexible(
+                                            child: Text(
+                                              "What do you want to learn today?",
+                                              style: TextStyle(
+                                                color: Colors.black,
+                                                fontSize: 16,
+                                                fontWeight: FontWeight.bold,
+                                              ),
+                                            ),
+                                          ),
+                                          ElevatedButton(
+                                            onPressed: () {},
+                                            style: ElevatedButton.styleFrom(
+                                              backgroundColor:
+                                                  Colors.deepOrangeAccent,
+                                              shape: RoundedRectangleBorder(
+                                                borderRadius:
+                                                    BorderRadius.circular(10),
+                                              ),
+                                            ),
+                                            child: Text(
+                                              "Get started",
+                                              style: TextStyle(
+                                                color: Colors.white,
+                                              ),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
                                     ),
                                   ),
                                   Container(
@@ -120,8 +158,46 @@ class _HomeScreenState extends State<HomeScreen> {
                                     width: size.width * 0.75,
                                     margin: EdgeInsets.all(10),
                                     decoration: BoxDecoration(
-                                      color: Colors.green,
+                                      color: Colors.blue[300],
                                       borderRadius: BorderRadius.circular(15),
+                                    ),
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(20.0),
+                                      child: Column(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceBetween,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Flexible(
+                                            child: Text(
+                                              "What do you want to learn today?",
+                                              style: TextStyle(
+                                                color: Colors.black,
+                                                fontSize: 16,
+                                                fontWeight: FontWeight.bold,
+                                              ),
+                                            ),
+                                          ),
+                                          ElevatedButton(
+                                            onPressed: () {},
+                                            style: ElevatedButton.styleFrom(
+                                              backgroundColor:
+                                                  Colors.deepOrangeAccent,
+                                              shape: RoundedRectangleBorder(
+                                                borderRadius:
+                                                    BorderRadius.circular(10),
+                                              ),
+                                            ),
+                                            child: Text(
+                                              "Get started",
+                                              style: TextStyle(
+                                                color: Colors.white,
+                                              ),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
                                     ),
                                   ),
                                   Container(
@@ -129,8 +205,46 @@ class _HomeScreenState extends State<HomeScreen> {
                                     width: size.width * 0.75,
                                     margin: EdgeInsets.all(10),
                                     decoration: BoxDecoration(
-                                      color: Colors.blue,
+                                      color: Colors.blue[300],
                                       borderRadius: BorderRadius.circular(15),
+                                    ),
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(20.0),
+                                      child: Column(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceBetween,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Flexible(
+                                            child: Text(
+                                              "What do you want to learn today?",
+                                              style: TextStyle(
+                                                color: Colors.black,
+                                                fontSize: 16,
+                                                fontWeight: FontWeight.bold,
+                                              ),
+                                            ),
+                                          ),
+                                          ElevatedButton(
+                                            onPressed: () {},
+                                            style: ElevatedButton.styleFrom(
+                                              backgroundColor:
+                                                  Colors.deepOrangeAccent,
+                                              shape: RoundedRectangleBorder(
+                                                borderRadius:
+                                                    BorderRadius.circular(10),
+                                              ),
+                                            ),
+                                            child: Text(
+                                              "Get started",
+                                              style: TextStyle(
+                                                color: Colors.white,
+                                              ),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
                                     ),
                                   ),
                                 ],
@@ -270,7 +384,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ],
             ),
             Positioned(
-              top: MediaQuery.of(context).size.height / 11,
+              top: MediaQuery.of(context).size.height / 9,
               left: 0,
               right: 0,
               child: Container(
