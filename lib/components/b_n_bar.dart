@@ -50,42 +50,36 @@ class _MainScreenState extends State<MainScreen> {
         ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      bottomNavigationBar: BottomAppBar(
-        shape: CircularNotchedRectangle(),
-        notchMargin: 8.0,
-        child: SizedBox(
-          height: 60,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              IconButton(
-                icon: Icon(Icons.home,
-                    color:
-                        _selectedIndex == 0 ? primaryColor : Colors.grey[400]),
-                onPressed: () => _onItemTapped(0),
-              ),
-              IconButton(
-                icon: Icon(Icons.book,
-                    color:
-                        _selectedIndex == 1 ? primaryColor : Colors.grey[400]),
-                onPressed: () => _onItemTapped(1),
-              ),
-              SizedBox(width: 40), // Space for the floating button
-              IconButton(
-                icon: Icon(Icons.message,
-                    color:
-                        _selectedIndex == 3 ? primaryColor : Colors.grey[400]),
-                onPressed: () => _onItemTapped(3),
-              ),
-              IconButton(
-                icon: Icon(Icons.person,
-                    color:
-                        _selectedIndex == 4 ? primaryColor : Colors.grey[400]),
-                onPressed: () => _onItemTapped(4),
-              ),
-            ],
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: _selectedIndex,
+        onTap: _onItemTapped,
+        selectedItemColor: primaryColor,
+        unselectedItemColor: Colors.grey[400],
+        type: BottomNavigationBarType
+            .fixed, // Ensures the labels are always shown
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home',
           ),
-        ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.book),
+            label: 'Course',
+          ),
+          BottomNavigationBarItem(
+            icon: SizedBox
+                .shrink(), // Placeholder for the FloatingActionButton space
+            label: 'Search',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.message),
+            label: 'Message',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            label: 'Account',
+          ),
+        ],
       ),
     );
   }

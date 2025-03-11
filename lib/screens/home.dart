@@ -10,18 +10,18 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  double _progress = 0.0;
-
-  void _startProgress() {
-    Future.delayed(Duration(milliseconds: 100), () {
-      if (_progress < 1.0) {
-        setState(() {
-          _progress += 0.1;
-        });
-        _startProgress();
-      }
-    });
-  }
+  final double _progress = 0.0;
+//
+  // void _startProgress() {
+  //   Future.delayed(Duration(milliseconds: 100), () {
+  //     if (_progress < 1.0) {
+  //       setState(() {
+  //         _progress += 0.1;
+  //       });
+  //       _startProgress();
+  //     }
+  //   });
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -32,9 +32,9 @@ class _HomeScreenState extends State<HomeScreen> {
         elevation: 0,
         backgroundColor: primaryColor,
         title: Padding(
-          padding: const EdgeInsets.symmetric(
-            vertical: 20,
-            horizontal: 20,
+          padding: EdgeInsets.symmetric(
+            vertical: size.height * 0.03,
+            horizontal: size.width * 0.03,
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -69,7 +69,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
               SizedBox(
-                height: 10,
+                height: size.height * 0.015,
               ),
             ],
           ),
@@ -95,19 +95,20 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: Container(
                     color: Colors.white,
                     child: Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 20),
+                      padding:
+                          EdgeInsets.symmetric(horizontal: size.width * 0.03),
                       child: SingleChildScrollView(
                         child: Column(
                           children: [
                             SizedBox(
-                              height: 80,
+                              height: size.height * 0.09,
                             ),
                             SingleChildScrollView(
                               scrollDirection: Axis.horizontal,
                               child: Row(
                                 children: [
                                   Container(
-                                    height: 150,
+                                    height: size.height * 0.2,
                                     width: size.width * 0.75,
                                     margin: EdgeInsets.all(10),
                                     decoration: BoxDecoration(
@@ -154,7 +155,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                     ),
                                   ),
                                   Container(
-                                    height: 150,
+                                    height: size.height * 0.2,
                                     width: size.width * 0.75,
                                     margin: EdgeInsets.all(10),
                                     decoration: BoxDecoration(
@@ -201,7 +202,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                     ),
                                   ),
                                   Container(
-                                    height: 150,
+                                    height: size.height * 0.2,
                                     width: size.width * 0.75,
                                     margin: EdgeInsets.all(10),
                                     decoration: BoxDecoration(
@@ -251,7 +252,8 @@ class _HomeScreenState extends State<HomeScreen> {
                               ),
                             ),
                             Padding(
-                              padding: const EdgeInsets.symmetric(vertical: 10),
+                              padding: EdgeInsets.symmetric(
+                                  vertical: size.height * 0.02),
                               child: Align(
                                 alignment: Alignment.topLeft,
                                 child: const Text(
@@ -265,7 +267,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               ),
                             ),
                             Container(
-                              height: 120,
+                              height: size.height * 0.15,
                               width: double.infinity,
                               decoration: BoxDecoration(
                                 color: Colors.white,
@@ -294,8 +296,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                       "40/48",
                                     ),
                                     tileColor: Colors.transparent,
-                                    contentPadding:
-                                        EdgeInsets.symmetric(horizontal: 20),
+                                    contentPadding: EdgeInsets.symmetric(
+                                        horizontal: size.width * 0.03),
                                     onTap: () {
                                       // Handle tap action here
                                     },
@@ -312,8 +314,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                       "40/48",
                                     ),
                                     tileColor: Colors.transparent,
-                                    contentPadding:
-                                        EdgeInsets.symmetric(horizontal: 20),
+                                    contentPadding: EdgeInsets.symmetric(
+                                        horizontal: size.width * 0.03),
                                     onTap: () {
                                       // Handle tap action here
                                     },
@@ -321,9 +323,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 ],
                               ),
                             ),
-                            SizedBox(
-                              height: 20,
-                            ),
+                            SizedBox(height: size.height * 0.03),
                             Container(
                               height: 120,
                               width: double.infinity,
@@ -341,8 +341,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                 ],
                               ),
                               child: Padding(
-                                padding:
-                                    const EdgeInsets.symmetric(horizontal: 10),
+                                padding: EdgeInsets.symmetric(
+                                    horizontal: size.width * 0.03),
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
