@@ -1,12 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:ilearn/components/b_n_bar.dart';
-import 'package:ilearn/screens/home.dart';
-import 'package:ilearn/screens/login.dart';
-import 'package:ilearn/screens/onboarding.dart';
-import 'package:ilearn/screens/phone_verification1.dart';
-import 'package:ilearn/screens/phone_verification2.dart';
-import 'package:ilearn/screens/sign_up.dart';
-import 'package:ilearn/screens/success.dart';
 
 void main() {
   runApp(const MyApp());

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:ilearn/components/app_bar_widget.dart';
 import 'package:ilearn/components/colors.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -39,24 +40,13 @@ class _HomeScreenState extends State<HomeScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  const Text(
-                    'Hi Kristin!',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  IconButton(
-                    icon: const Icon(
-                      Icons.person_3,
-                      color: Colors.white,
-                    ),
-                    onPressed: () {},
-                  ),
-                ],
+              AppBarWidget(
+                text: "Hi Kristin",
+                color: Colors.white,
+                icon: Icon(
+                  Icons.person_3,
+                  color: Colors.white,
+                ),
               ),
               SizedBox(
                 height: 1,
@@ -285,9 +275,16 @@ class _HomeScreenState extends State<HomeScreen> {
                               child: Column(
                                 children: [
                                   ListTile(
-                                    leading: Icon(
-                                      Icons.radio_button_on_outlined,
-                                      size: 20,
+                                    leading: SizedBox(
+                                      height: 20,
+                                      width: 20,
+                                      child: CircularProgressIndicator(
+                                        strokeWidth: 2.0,
+                                        valueColor:
+                                            AlwaysStoppedAnimation<Color>(
+                                          Colors.grey,
+                                        ),
+                                      ),
                                     ),
                                     title: Text(
                                       "Packaging Design",
@@ -303,9 +300,16 @@ class _HomeScreenState extends State<HomeScreen> {
                                     },
                                   ),
                                   ListTile(
-                                    leading: Icon(
-                                      Icons.radio_button_on_outlined,
-                                      size: 20,
+                                    leading: SizedBox(
+                                      height: 20,
+                                      width: 20,
+                                      child: CircularProgressIndicator(
+                                        strokeWidth: 2.0,
+                                        valueColor:
+                                            AlwaysStoppedAnimation<Color>(
+                                          Colors.grey,
+                                        ),
+                                      ),
                                     ),
                                     title: Text(
                                       "Product Design",

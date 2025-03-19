@@ -67,8 +67,10 @@ class _MainScreenState extends State<MainScreen> {
             label: 'Course',
           ),
           BottomNavigationBarItem(
-            icon: SizedBox
-                .shrink(), // Placeholder for the FloatingActionButton space
+            icon: Padding(
+              padding: EdgeInsets.only(top: 25),
+              child: SizedBox.shrink(),
+            ), // Placeholder for the FloatingActionButton space
             label: 'Search',
           ),
           BottomNavigationBarItem(
