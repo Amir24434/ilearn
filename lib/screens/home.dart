@@ -102,7 +102,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                     width: size.width * 0.75,
                                     margin: EdgeInsets.all(10),
                                     decoration: BoxDecoration(
-                                      color: Colors.blue[300],
+                                      color: primaryColor,
                                       borderRadius: BorderRadius.circular(15),
                                     ),
                                     child: Padding(
@@ -149,7 +149,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                     width: size.width * 0.75,
                                     margin: EdgeInsets.all(10),
                                     decoration: BoxDecoration(
-                                      color: Colors.blue[300],
+                                      color: primaryColor,
                                       borderRadius: BorderRadius.circular(15),
                                     ),
                                     child: Padding(
@@ -196,7 +196,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                     width: size.width * 0.75,
                                     margin: EdgeInsets.all(10),
                                     decoration: BoxDecoration(
-                                      color: Colors.blue[300],
+                                      color: primaryColor,
                                       borderRadius: BorderRadius.circular(15),
                                     ),
                                     child: Padding(
@@ -443,7 +443,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             "60min",
                             style: TextStyle(
                               fontSize: 10,
-                              color: Colors.grey[300],
+                              color: Colors.grey[400],
                             ),
                           ),
                         ],
