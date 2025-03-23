@@ -82,7 +82,7 @@ class CourseScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     _buildCourseCard(size, "Language"),
-                    _buildCourseCard(size, "WLanguage"),
+                    _buildCourseCard(size, "Painting"),
                   ],
                 ),
                 const SizedBox(height: 20),
