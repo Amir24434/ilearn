@@ -22,7 +22,7 @@ class CoursesTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 10),
+      padding: const EdgeInsets.symmetric(vertical: 10),
       child: Material(
         elevation: 8.0, // Increase this value to get more elevation
         borderRadius: BorderRadius.circular(20), // Optional: Rounded corners
